@@ -1,4 +1,4 @@
 class Image < ApplicationRecord
   belongs_to :profile
-  has_one :image_detail
+  has_many :image_details
 end

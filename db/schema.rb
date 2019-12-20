@@ -18,7 +18,9 @@ ActiveRecord::Schema.define(version: 2019_12_19_133003) do
   create_table "image_details", force: :cascade do |t|
     t.integer "image_id"
     t.integer "stat_id"
-    t.string "data"
+    t.string "tag"
+    t.decimal "value"
+    t.string "model"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -38,7 +40,6 @@ ActiveRecord::Schema.define(version: 2019_12_19_133003) do
 
   create_table "stats", force: :cascade do |t|
     t.integer "profile_id"
-    t.string "data"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
