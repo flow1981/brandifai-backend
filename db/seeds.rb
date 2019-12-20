@@ -11,8 +11,8 @@ Image.destroy_all
 Stat.destroy_all
 ImageDetail.destroy_all
 
-Profile.create(profile_name: "adam")
-Profile.create(profile_name: "eve")
+Profile.create(username: "adam", icon_url: "https://www.thesun.co.uk/wp-content/uploads/2018/08/NINTCHDBPICT000428200792-e1535023734744.jpg")
+Profile.create(username: "eve", icon_url: "https://www.hairstylo.com/wp-content/uploads/2018/11/Hairstyles-for-small-face-45.jpg")
 puts "created #{Profile.all.length} profiles"
 
 Image.create(image_url: 'https://lolnein.com/comics/adayatthebeach.png', profile_id: Profile.all.first.id)
