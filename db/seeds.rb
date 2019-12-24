@@ -16,11 +16,11 @@ Profile.create(username: "eve", icon_url: "https://www.hairstylo.com/wp-content/
 puts "created #{Profile.all.length} profiles"
 
 Image.create(image_url: 'https://lolnein.com/comics/adayatthebeach.png', profile_id: Profile.all.first.id)
-Image.create(image_url: 'https://lolnein.com/comics/adayatthebeach.png', profile_id: Profile.all.first.id)
-Image.create(image_url: 'https://lolnein.com/comics/adayatthebeach.png', profile_id: Profile.all.first.id)
-Image.create(image_url: 'https://lolnein.com/comics/adayatthebeach.png', profile_id: Profile.all.first.id)
-Image.create(image_url: 'https://lolnein.com/comics/adayatthebeach.png', profile_id: Profile.all.second.id)
-Image.create(image_url: 'https://lolnein.com/comics/adayatthebeach.png', profile_id: Profile.all.second.id)
+Image.create(image_url: 'http://blogs.slj.com/goodcomicsforkids/files/2019/04/origin-1.jpg', profile_id: Profile.all.first.id)
+Image.create(image_url: 'https://upload.wikimedia.org/wikipedia/commons/e/eb/Ash_Tree_-_geograph.org.uk_-_590710.jpg', profile_id: Profile.all.first.id)
+Image.create(image_url: 'https://i.stack.imgur.com/bf7tS.jpg', profile_id: Profile.all.first.id)
+Image.create(image_url: 'https://i.imgur.com/ptLFNyn.jpg', profile_id: Profile.all.second.id)
+Image.create(image_url: 'https://i.imgur.com/XP5V9X9.jpg', profile_id: Profile.all.second.id)
 puts "created #{Image.all.length} images"
 
 Stat.create(profile_id: Profile.all.first.id)
