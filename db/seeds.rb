@@ -28,7 +28,12 @@ Stat.create(profile_id: Profile.all.second.id)
 puts "created #{Stat.all.length} stats"
 
 
-Scraper.test_data.each{|concept| ImageDetail.create(image_id: Image.first.id, stat_id: Stat.first.id, model: concept[:model], tag: concept[:tag], value: concept[:value])}
+Scraper.test_data.each{
+  |concept| 
+  ImageDetail.create(image_id: Image.first.id, stat_id: Stat.first.id, model: concept[:model], tag: concept[:tag], value: concept[:value])
+}
+
+
 puts "created #{ImageDetail.all.length}  image data"
 
 # File.write("/Users/alexshom/Desktop/filename.json", details)

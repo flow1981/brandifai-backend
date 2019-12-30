@@ -1,8 +1,8 @@
-# require 'nokogiri'
-# require 'open-uri'
-# require 'byebug'
-# require "instagrammer"
-# require "clarinet"
+require 'nokogiri'
+require 'open-uri'
+require 'byebug'
+require "instagrammer"
+require "clarinet"
 
 class Scraper < ApplicationRecord
 
@@ -70,6 +70,4 @@ class Scraper < ApplicationRecord
 
 end
   
-#create c
-# // create img [images]
-# // create details ^
+# pp Scraper.get_user_posts("barackobama", 10)

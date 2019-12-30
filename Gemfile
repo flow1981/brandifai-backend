@@ -28,6 +28,8 @@ gem 'rack-cors'
 gem 'clarinet'
 gem "json"
 gem 'active_model_serializers'
+gem 'nokogiri'
+gem "instagrammer"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
