@@ -11,7 +11,7 @@ class Scraper < ApplicationRecord
     posts =  user.get_posts(number)
     shortcodes = posts.map { |post| post.shortcode}
     get_img_urls(shortcodes)
-    pp shortcodes.size
+    # pp shortcodes.size
   end
 
   def self.get_img_urls(shortcodes)
