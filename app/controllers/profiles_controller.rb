@@ -28,8 +28,16 @@ class ProfilesController < ApplicationController
       # callClarifaiApiOn(image, stat) //re enable pls
     }
 
-    render json: params
+    render json: profile.id
 
+  end
+
+  def update
+    profile = Profile.find(params[:id])
+    
+    profile.update(icon_url: params[:icon_url])
+
+    render json: profile
   end
 
   def callClarifaiApiOn(image, stat)
