@@ -14,7 +14,7 @@ class ProfilesController < ApplicationController
 
     # get profile name front frontend
     profile_name = params[:_json]
-    number = 4
+    number = 10
 
     profile = Profile.create(username: profile_name)
     stat = Stat.create(profile_id: profile.id)
