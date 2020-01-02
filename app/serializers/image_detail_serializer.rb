@@ -1,6 +1,6 @@
 class ImageDetailSerializer < ActiveModel::Serializer
 
-  attributes :tag
+  attributes :tag, :value
   
   
   end
