@@ -25,7 +25,7 @@ class ProfilesController < ApplicationController
 
     image_urls.each { |image_url| 
       image = Image.create({image_url: image_url, profile_id: profile.id})
-      # callClarifaiApiOn(image, stat) //re enable pls
+      callClarifaiApiOn(image, stat)
     }
 
     render json: profile.id
