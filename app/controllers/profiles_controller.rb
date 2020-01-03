@@ -40,6 +40,14 @@ class ProfilesController < ApplicationController
     render json: profile
   end
 
+  def destroy
+    profile = Profile.find(params[:id])
+
+    profile.destroy
+
+    render json: {status: "Successful delete"}
+  end
+
   def callClarifaiApiOn(image, stat)
 
     details = Clarifai.get_data(image.image_url)
