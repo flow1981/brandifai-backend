@@ -27,6 +27,13 @@ class StatsController < ApplicationController
         }
         
         sorted = result.sort! { |a, b|  b.values[0] <=> a.values[0] }
+
+        extended_array = original_array.map { |element| element.tag}
+
+        if params[:extend]
+          render json: extended_array.join(" ")
+        else
         render json: sorted
+        end
     end
 end
