@@ -12,19 +12,33 @@ class ProfilesController < ApplicationController
   def create
 
     # get profile name front frontend
+    puts "//////////////////"
+    puts params[:_json]
     profile_name = params[:_json]
     number = 10
 
     profile = Profile.create(username: profile_name)
     stat = Stat.create(profile_id: profile.id)
 
+
+    puts "//////////////////"
+    puts profile
+    puts "//////////////////"
+    puts stat
+
     # run scraper with profile name
     image_urls = Scraper.get_user_posts(profile_name, number)
+
+    puts "//////////////////"
+    puts image_urls
 
     image_urls.each { |image_url|
       image = Image.create({ image_url: image_url, profile_id: profile.id })
       callClarifaiApiOn(image, stat)
     }
+
+    puts "//////////////////"
+    puts Image.last
 
     original_array = stat.image_details
 
@@ -33,6 +47,9 @@ class ProfilesController < ApplicationController
     text = extended_array.join(" ")
 
     stat.update( theme: ParallelDots.get_data(text))
+
+    puts "//////////////////"
+    puts stat
 
     render json: profile.id
   end
