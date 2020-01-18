@@ -31,7 +31,11 @@ class StatsController < ApplicationController
         extended_array = original_array.map { |element| element.tag}
 
         if params[:extend]
-          render json: extended_array.join(" ")
+          puts "//////////////"
+          puts stat["theme"]["taxonomy"]
+          puts "//////////////"
+
+          render json: stat["theme"]["taxonomy"]
         else
         render json: sorted
         end
