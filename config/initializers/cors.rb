@@ -7,7 +7,7 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins 'https://brandifai-backend.herokuapp.com'
+    origins 'http://mod4-brandifai-frontend.s3-website.eu-west-2.amazonaws.com'
 
     resource '*',
       headers: :any,
